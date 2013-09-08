@@ -21,6 +21,11 @@
 			<input class="url-input pure-input-1" type="text" placeholder="Browse">
 		</div>
 
+	<button id="contrastColor">C O N T R A S T</button>
+
+			<button id="speechButton">0</button>
+			<div id="audio"></audio>
+
 	</div>
 
 	<iframe class="webpage" src=""></iframe>
@@ -31,6 +36,9 @@
 
 	</script>
 
+	<script src="./speakGenerator.js"></script>
+	<script src="./speakWorker.js"></script>
+	<script src="./speakClient.js"></script>
 	<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
 	<script>
 		YUI({
@@ -52,7 +60,7 @@
 						},
 						'sixthsense-app': {
 							path: 'app.js',
-							requires: ['app', 'node', 'event-mouseenter', 'sixthsense-view']
+							requires: ['app', 'node', 'event-mouseenter', 'sixthsense-view', 'node-event-simulate']
 						}
 					}
 				}

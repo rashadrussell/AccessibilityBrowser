@@ -35,28 +35,14 @@ YUI.add('sixthsense-app', function (Y) {
 				iframe.setStyle('height', '2000px');
 				iframe.set('scrolling', 'no');
 
-				//iframe.once('load', function() {
-				
-				//});
+				iframe.once('load', function() {
+					new SixthSenseView();
+				});
 
-				new SixthSenseView();
+				
 			});
 
 			
-
-			/*
-			iframe.once('load', function() {
-				new SixthSenseView();
-				
-				iframe.on('mouseenter', function() {
-					iframe.setStyle('overflow', 'scroll');
-				});
-
-				iframe.on('mouseleave', function() {
-					iframe.setStyle('overflow', 'hidden');
-				});
-			});
-*/
 
 		},
 

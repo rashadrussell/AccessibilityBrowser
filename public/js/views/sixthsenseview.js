@@ -6,6 +6,7 @@ YUI.add('sixthsense-view', function (Y) {
 	// -- Todo View -------------------
 	var SixthSenseView = Y.Base.create('sixthsenseView', Y.View, [], {
 
+		containerTemplate: Y.one('.webpage').get('contentDocument').one('html').one('body'),
 
 		// Bind DOM events for handling changes to a specific Todo,
 		// for completion and editing.
@@ -17,8 +18,66 @@ YUI.add('sixthsense-view', function (Y) {
 		// is updated or destroyed.
 		initializer: function () {
 
-			//this.set('container', Y.one('.webpage').get('contentDocument').one('html').one('body'));
-			//this.get('container').setStyle('height', this.get('container').ancestor('iframe').get('clientHeight'));
+			//////////////////////////////////
+			////// Anchor Voice ///////////////////
+			///////////////////////////////
+			var anchors   = [],
+				container = Y.one('iframe').get('contentDocument').get('body'),
+				counter = 0,
+				speechButton = Y.one('#speechButton');
+
+			container.all('a').each(function(anchor) {
+				anchors.push(anchor);
+			});
+
+			window.onkeydown = function(e) {
+
+
+				if(e.keyCode === 39) {
+
+					counter = parseInt(speechButton.get('innerText'));
+					console.log(counter);
+
+					speak(anchors[counter].get('innerText'));
+					
+					counter = counter % anchors.length - 1;
+					counter++; 
+
+					counter++;
+					speechButton.set('innerText', counter);
+					
+				};
+			}
+
+
+
+			/////////////////////////////
+			/////////Contrast Color //////
+			/////////////////////////////
+
+			Y.one('#contrastColor').on('click', function() {
+				container.all('div').each(function(div) {
+					div.setStyle('backgroundColor', '#000');
+					div.get('children').each(function(child) {
+						child.setStyle('color', '#fff');
+					});
+
+				});
+
+				container.all('a').each(function(anchor) {
+					anchor.setStyle('color', '#fff');
+				});
+
+				container.all('p').each(function(anchor) {
+					anchor.setStyle('color', '#fff');
+				});
+
+			});
+			
+
+
+
+
 
 		},
 
