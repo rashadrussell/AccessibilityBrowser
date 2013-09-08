@@ -32,12 +32,14 @@ YUI.add('sixthsense-app', function (Y) {
 			socket.on('changeURL', function(url) {
 
 				iframe.set('src', url);
-				iframe.setStyle('height', '1000px');
+				iframe.setStyle('height', '2000px');
+				iframe.set('scrolling', 'no');
 
-				iframe.once('load', function() {
+				//iframe.once('load', function() {
+				
+				//});
+
 				new SixthSenseView();
-			});
-
 			});
 
 			

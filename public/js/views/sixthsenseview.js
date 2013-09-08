@@ -17,7 +17,7 @@ YUI.add('sixthsense-view', function (Y) {
 		// is updated or destroyed.
 		initializer: function () {
 
-			this.set('container', Y.one('.webpage').get('contentDocument').one('html').one('body'));
+			//this.set('container', Y.one('.webpage').get('contentDocument').one('html').one('body'));
 			//this.get('container').setStyle('height', this.get('container').ancestor('iframe').get('clientHeight'));
 
 		},
