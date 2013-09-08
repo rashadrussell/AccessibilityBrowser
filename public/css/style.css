@@ -1,0 +1,25 @@
+#header {
+	height: 40px;
+	background: #230233;
+}
+
+.url-input-container {
+	margin-left: -50px;
+}
+
+.url-input {
+	border-radius: 4px;
+	margin-top: 8px;
+	width: 1150px;
+}
+
+.logo {
+	padding: 0;
+	margin: 10px 0 0 5px;
+	color: #fff
+}
+
+.webpage {
+	border: none;
+	width: 100%;
+}

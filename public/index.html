@@ -1,8 +1,68 @@
 <html>
 <head>
-<title>Accessibility Browser</title>
+	<title>Sixth Sense</title>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="/socket.io/socket.io.js"></script>
+
+
 </head>
 <body>
-Hello
+
+<div id="SixthSenseApp">
+	<div id="header" class="pure-g-r">
+
+		<div class="logo-container pure-u-1-8">
+			<h4 class="logo">Sixth Sense</h4>
+		</div>
+
+		<div class="url-input-container pure-u-5-8">
+			<input class="url-input pure-input-1" type="text" placeholder="Browse">
+		</div>
+
+	</div>
+
+	<iframe class="webpage" src=""></iframe>
+</div>
+
+	<script>
+	  var socket = io.connect('http://127.0.0.1:3000');
+
+	  socket.on('news', function (data) {
+	    console.log(data);
+	  });
+	</script>
+
+	<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+	<script>
+		YUI({
+			groups: {
+				'sixthsense': {
+					base: './js/',
+					modules: {
+						'sixthsense': {
+							path: 'models/sixthsense.js',
+							requires: ['model']
+						},
+						'sixthsense-list': {
+							path: 'models/sixthsenselist.js',
+							requires: ['model-list']
+						},
+						'sixthsense-view': {
+							path: 'views/sixthsenseview.js',
+							requires: ['view', 'node']
+						},
+						'sixthsense-app': {
+							path: 'app.js',
+							requires: ['app', 'node', 'event-mouseenter', 'sixthsense-view']
+						}
+					}
+				}
+			}
+		}).use('sixthsense-app', function (Y) {
+			var app = new Y.SixthSenseMVC.SixthSense();
+		});
+	</script>
 </body>
 </html>
