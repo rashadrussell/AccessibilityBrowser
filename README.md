@@ -38,6 +38,8 @@ Proven sites that work:
 APIs Used
 _________
 
+YUI
+YUI's App Framework
 NodeJS
 ExpressJS
 Wget
