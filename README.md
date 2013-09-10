@@ -8,8 +8,8 @@ This project was a hack for the PennApps 2013 hackathon.
 Features
 ________
 
-- Text Speech (**Click the right arrow**): Reads through links
-- Color Contrast Control(**Click the Contrast Button**)
+- Text Speech ( **Click the right arrow** ): Reads through links
+- Color Contrast Control( **Click the Contrast Button** )
 
 
 Start App
