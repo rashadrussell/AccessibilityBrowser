@@ -38,11 +38,11 @@ Proven sites that work:
 APIs Used
 _________
 
-YUI
-YUI's App Framework
-NodeJS
-ExpressJS
-Wget
-Speaker.js
-SocketIO
-PureCSS.io
+- YUI
+- YUI's App Framework
+- NodeJS
+- ExpressJS
+- Wget
+- Speaker.js
+- SocketIO
+- PureCSS.io
