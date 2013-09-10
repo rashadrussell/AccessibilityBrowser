@@ -15,7 +15,7 @@ ________
 Start App
 _________
 
-1.) Navigate to root directory in command line: **node server**
+1.) Navigate to this project's root directory in command line: **node server**
 
 2.) Go to **127.0.0.1:3000** in Chrome(recommended) or FireFox
 
